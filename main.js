@@ -11,23 +11,23 @@
 
 const app = new Vue({
     el: "#app",
-    data: {
-        todos: 
+    data: [
+        todos:
         {
             text: "Fare la spesa",
-            done: "true",
+            done: "true"
         },
         {
             text: "Pagare le bollette",
-            done: "true",
+            done: "true"
         },
         {
             text: "Andare in palestra",
-            done: "false",
+            done: "false"
         },
         {
             text: "Chiamare il dentista",
-            done: "false",
-        },
-    }
+            done: "false"
+        }
+    ],
 });
