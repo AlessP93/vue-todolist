@@ -1,6 +1,3 @@
-// Questa volta però ogni todo sarà un oggetto, formato da due proprietà:
-// - text, una stringa che indica il testo del todo
-// - done, un booleano (true/false) che indica se il todo è stato fatto oppure no
 
 // Stampare all'interno di una lista, un item per ogni todo.
 // Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato.
@@ -9,25 +6,30 @@
 
 // Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul pulsante, il testo digitato viene letto e utilizzato per creare un nuovo todo, che quindi viene aggiunto alla lista dei todo esistenti.
 
+// Questa volta però ogni todo sarà un oggetto, formato da due proprietà:
 const app = new Vue({
     el: "#app",
-    data: [
-        todos:
-        [
-            text: "Fare la spesa",
-            done: "true"
+    data: {
+        todos: [
+            // text, una stringa che indica il testo del todo
+            // done, (true/false) che indica se il todo è stato fatto oppure no
+            {
+                text: "Fare la spesa",
+            
+                done: true,
+            },
+            {
+                text: "Pagare le bollette",
+                done: true,
+            },
+            {
+                text: "Andare in palestra",
+                done: false,
+            },
+            {
+                text: "Chiamare il dentista",
+                done: false
+            }
         ],
-        [
-            text: "Pagare le bollette",
-            done: "true"
-        ],
-        [
-            text: "Andare in palestra",
-            done: "false"
-        ],
-        [
-            text: "Chiamare il dentista",
-            done: "false"
-        ]
-    ],
+    },
 });
