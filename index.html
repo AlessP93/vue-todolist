@@ -10,28 +10,28 @@
      <!-- /font-awesome -->
      <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  
-    <div id="app" class="container">
+    <body>
+    
+        <div id="app" class="container">
+            
+            <div class="logo">
+                <img src="img/rolex.png" alt="pic">
+            </div>
         
-        <div class="logo">
-            <img src="" alt="">
-        </div>
-    
-        <div>
-            <input type="text" name="" id="">
-            <button></button>
-        </div>
+            <div class="new-todo">
+                <input type="text" placeholder="Inserisci il tuo Rolex">
+                <button class="btn">Aggiungi</button>
+            </div>
 
-        <div class="todos-container">
-            <ul>
-                <li class="todo"></li>
-            </ul>
-        </div>
+            <div class="todos-container">
+                <ul>
+                    <li class="todo" v-for="todo in todos">{{ todo }}<i class="fa-solid fa-xmark"></i></li>
+                </ul>
+            </div>
 
-    </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <script src="js/main.js"></script>
-</body>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script src="js/main.js"></script>
+    </body>
 </html>
