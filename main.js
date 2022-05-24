@@ -30,7 +30,7 @@ const app = new Vue({
             }
             // Stampare all'interno di una lista, un item per ogni todo.
         ],
-        newTodo: "",
+        newTodo: " ",
     },
     methods: {
         addTodo() {
@@ -38,9 +38,9 @@ const app = new Vue({
                 const newTodo = {
                     text:this.newTodo,
                     done: false,
-                };
+                }
                 this.todos.push(newTodo);
-                this.newTodo= "";
+                this.newTodo= " ";
             }
         },
         isDone(index) {
