@@ -19,14 +19,16 @@
             </div>
         
             <div class="new-todo">
-                <input type="text" placeholder="Aggiungi cose da fare">
+                <input type="text" placeholder="Aggiungi cose da fare" v-model = "newTodo" required>
                 <button class="btn">Aggiungi</button>
             </div>
 
             <div class="todos-container">
-                <ul>
-                    <li class="todo" v-for="todo in todos">{{ todo.text }}<i class="fa-solid fa-xmark"></i></li>
+                <ul v-if="todos.length > 0">
+                    <li class="todo" v-for="(todo, index) in todos" :class="{'active' : todo.done}">
+                        <span @click="todo.done = !todo.done"></span>{{ todo.text }}<i  @click="isDelete(index)" class="fa-solid fa-x"></i> <i @click="isDone(index)" class="fa-solid fa-check"></i> </li>
                 </ul>
+                <h2 v-else>Non sono presenti appunti</h2>
             </div>
 
         </div>

@@ -44,3 +44,7 @@ body {
 .todos-container li{
     list-style: none;
 }
+
+.active {
+    text-decoration: line-through;
+}

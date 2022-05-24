@@ -1,5 +1,4 @@
 
-// Stampare all'interno di una lista, un item per ogni todo.
 // Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato.
 
 // Visualizzare a fianco ad ogni item ha una "x": cliccando su di essa, il todo viene rimosso dalla lista.
@@ -15,12 +14,11 @@ const app = new Vue({
             // done, (true/false) che indica se il todo è stato fatto oppure no
             {
                 text: "Fare la spesa",
-            
-                done: true,
+                done: false,
             },
             {
                 text: "Pagare le bollette",
-                done: true,
+                done: false,
             },
             {
                 text: "Andare in palestra",
@@ -30,6 +28,26 @@ const app = new Vue({
                 text: "Chiamare il dentista",
                 done: false
             }
+            // Stampare all'interno di una lista, un item per ogni todo.
         ],
+        newTodo: "",
+    },
+    methods: {
+        addTodo() {
+            if( this.newTodo !== " ") {
+                const newTodo = {
+                    text:this.newTodo,
+                    done: false,
+                };
+                this.todos.push(newTodo);
+                this.newTodo= "";
+            }
+        },
+        isDone(index) {
+            return this.todos[index].done = !this.todos[index].done
+        },
+        isDelete(index) {
+            this.todos.splice(index, 1);
+        },
     },
 });
